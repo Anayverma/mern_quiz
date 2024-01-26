@@ -1,8 +1,17 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import {useDispatch } from 'react-redux'
+
+import {setUserId, pushResultAction, resetResultAction} from '../redux/Result_Reducer.js'
+import {startExamAction , moveNextAction , movePrevAction, resetAllAction} from '../redux/Question_Reducer.js'
 function Result() {
+
+const dispatch = useDispatch()
+
   function onRestart(){
     console.log("restarting the quiz")
+    dispatch(resetAllAction())
+    dispatch(resetResultAction())
   }
   return (
     <>

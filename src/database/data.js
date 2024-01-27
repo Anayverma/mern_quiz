@@ -29,17 +29,17 @@ export default[
             'D'
         ]
     },
-    // {
-    //     id : 4,
-    //     question : "a _ c d",
-    //     options : [
-    //         'A',
-    //         'B',
-    //         'C',
-    //         'D'
-    //     ]
-    // }
-    // ,
+    {
+        id : 4,
+        question : "a _ c d",
+        options : [
+            'A',
+            'B',
+            'C',
+            'D'
+        ]
+    }
+    ,
     // {
     //     id : 5,
     //     question : "_ b c d",

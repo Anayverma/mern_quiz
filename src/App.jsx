@@ -5,6 +5,7 @@ import Result from './components/Result.jsx'
 import Layouts from './Layouts.jsx'
 import Home from './components/Home.jsx'
 import Quiz from './components/Quiz.jsx'
+import { CheckUserExist } from './helper/Helper.jsx'
 
 // router 
 const router = createBrowserRouter(
@@ -18,12 +19,12 @@ const router = createBrowserRouter(
           element : <Home />
         },
         {
-          path : '/quiz',
-          element : < Quiz />
+          path : 'quiz',
+          element : <CheckUserExist> < Quiz /> </CheckUserExist>
         },
         {
-          path : '/result',
-          element : <Result/>
+          path : 'result',
+          element : <CheckUserExist><Result/></CheckUserExist>
         }
       ]
     }

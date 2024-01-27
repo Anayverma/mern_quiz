@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import data from '../database/data.js';
+import data ,{ answers } from '../database/data.js';
 import { useDispatch } from 'react-redux';
 import * as Action from '../redux/Question_Reducer.js';
 
@@ -26,7 +26,7 @@ function useFetchQuestion() {
             isLoading: false,
             apiData: question,
           }));
-          dispatch(Action.startExamAction(question));
+          dispatch(Action.startExamAction({question,answers}));
         } else {
             console.log("lonegth==0")
           throw new Error("NO QUESTION AVAILABLE --X ");

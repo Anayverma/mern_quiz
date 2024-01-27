@@ -8,6 +8,7 @@ import { Navigate } from 'react-router-dom'
 
 function Quiz() {
   const [check, setCheck] = useState()
+  const state =useSelector(state => state)
   const result = useSelector(state => state.result.result)
   const { queue, trace } = useSelector(state => state.questions);
   const dispatch = useDispatch()
@@ -15,18 +16,19 @@ function Quiz() {
 
 
   useEffect(() => {
-    // console.log("use selector(state)",state)
-  })
+    console.log("use selector(state)",state)
+  },[state])
 
   function onNext(){
     // console.log(state)
 
     console.log("next clicked")
     if(trace<queue.length){ dispatch(MoveNextQuestion())
-    dispatch(PushAnswer(check))
+      if(result.length <=trace)
+        dispatch(PushAnswer(check))
     // console.log(state)
     }
-
+    setCheck(undefined)
   }
   function onPrevious(){
     if(trace >0) dispatch(MovePrevAction())

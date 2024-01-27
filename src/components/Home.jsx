@@ -2,6 +2,7 @@ import React, { useRef } from 'react'
 import { useDispatch } from 'react-redux'
 import { Link, Navigate } from 'react-router-dom'
 import { setUserId } from '../redux/Result_Reducer'
+// import '../styles/Main.css'
 function Home() {
   const inputref = useRef(null)
   const dispatch = useDispatch()
@@ -15,14 +16,14 @@ function Home() {
     <>
 
       <div>
-        <h1>Quiz Application </h1>
+        {/* <h1>Quiz Application </h1> */}
 
         <ol>
-          <li> you have 10 questions </li>
-          <li> 10 points , 1 point each question </li>
-          <li> every question a\has three options </li>
-          <li>can riview and change the answers </li>
-          <li> result is declared at end of quiz </li>
+          <li> 3 questions to be asked. </li>
+          <li> 10 points each. </li>
+          <li> Each question contains 4 options </li>
+          <li>You are given a chance to review and change the answers </li>
+          <li> Result will be declared at the end. </li>
         </ol>
 
         <form id="form ">

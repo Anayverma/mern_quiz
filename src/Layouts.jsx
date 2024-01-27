@@ -7,7 +7,6 @@ function Layouts() {
     <div>
 
         <Header/>
-        Layouutss
         <Outlet/>
         <Footer/>
         

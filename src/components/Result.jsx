@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import {useDispatch, useSelector} from 'react-redux'
 import { attempts_Number, earnPoints_Number, flagResult } from '../helper/Helper.jsx'
-
+// import '../styles/Result.css';
 
 import {setUserId, pushResultAction, resetResultAction} from '../redux/Result_Reducer.js'
 import {startExamAction , moveNextAction , movePrevAction, resetAllAction} from '../redux/Question_Reducer.js'
@@ -44,22 +44,22 @@ usePublishResult({result,
   return (
     <>
     <div>
-      <h1>Quiz Application</h1>
+      <h2>Quiz Result</h2>
       <div>
         <div>
-          <span> Username </span>
+          <span> Username ---</span>
           <span>{userId}</span>
         </div>
         <div>
-          <span> total quiz points </span>
+          <span> Total Quiz Points  --- </span>
           <span>{totolPoints||0}</span>
         </div>
         <div>
-          <span> total attempts </span>
+          <span> Total Attempts --- </span>
           <span>{attempts||0}</span>
         </div>
         <div>
-          <span> Total earn points  </span>
+          <span> Total Earn Points  --- </span>
           <span>{earnPoints||0}</span>
         </div>
         <div>

@@ -1,5 +1,6 @@
 import { useState } from 'react'
 // import './App.css'
+// import './styles/App.css';
 import { RouterProvider, createBrowserRouter } from "react-router-dom"
 import Result from './components/Result.jsx'
 import Layouts from './Layouts.jsx'

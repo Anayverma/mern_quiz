@@ -2,7 +2,7 @@ import React from 'react'
 
 function Header() {
   return (
-    <div>Header Anay Verma Header</div>
+    <h1>QuizMania</h1>
   )
 }
 

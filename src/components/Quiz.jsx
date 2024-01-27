@@ -46,7 +46,7 @@ function Quiz() {
   return (
     <>
         <div>
-          <h1> Quiz Application </h1>
+          {/* <h1> Quiz Application </h1> */}
           <Questions  onChecked={onChecked}/>
           <button onClick={onPrevious}>
             Prev

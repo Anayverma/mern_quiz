@@ -2,7 +2,8 @@ import React from 'react'
 
 function Footer() {
   return (
-    <div>Footer anay verma Footer</div>
+    <div>  <strong>NOTE: </strong>
+      you can select only ONE option </div>
   )
 }
 

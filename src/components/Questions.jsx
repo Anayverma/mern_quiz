@@ -40,7 +40,7 @@ function Questions({onChecked}) {
 
   return (
     <div className='questions'>
-        <h2 className='text-light'>{questions?.question}</h2>
+        <h3 className='text-light'>{questions?.question}</h3>
 
         <ul key={questions?.id}>
             {

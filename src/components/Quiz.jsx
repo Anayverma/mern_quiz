@@ -16,27 +16,27 @@ function Quiz() {
 
 
   useEffect(() => {
-    console.log("use selector(state)",state)
+    // console.log("use selector(state)",state)
   },[state])
 
   function onNext(){
-    // console.log(state)
+    // // console.log(state)
 
-    console.log("next clicked")
+    // console.log("next clicked")
     if(trace<queue.length){ dispatch(MoveNextQuestion())
       if(result.length <=trace)
         dispatch(PushAnswer(check))
-    // console.log(state)
+    // // console.log(state)
     }
     setCheck(undefined)
   }
   function onPrevious(){
     if(trace >0) dispatch(MovePrevAction())
-    console.log("previous clicked")
+    // console.log("previous clicked")
   }
 
   function onChecked(check){
-    console.log(check)
+    // console.log(check)
     setCheck(check)
   }
 

@@ -16,22 +16,22 @@ function Questions({onChecked}) {
     // const;
 
     useEffect(() => {
-        console.log("   trace    ",trace)
+        // console.log("   trace    ",trace)
     },)
 
     useEffect(()=>{
-        // console.log(isLoading,"iuhue")
-        // console.log(apiData)
-        // console.log(serverError)
-        // console.log("questions",questions)
+        // // console.log(isLoading,"iuhue")
+        // // console.log(apiData)
+        // // console.log(serverError)
+        // // console.log("questions",questions)
 
     },[isLoading,apiData,serverError])
 
    function onSelect(i) {
 //     if(!checked) setChecked(true)
 //     else setChecked(false)
-    // console.log("after setState", checked);
-        console.log( i," ", Date.now())
+    // // console.log("after setState", checked);
+        // console.log( i," ", Date.now())
         onChecked(i)
   }
 

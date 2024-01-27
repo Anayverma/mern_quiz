@@ -6,6 +6,7 @@ import { attempts_Number, earnPoints_Number, flagResult } from '../helper/Helper
 
 import {setUserId, pushResultAction, resetResultAction} from '../redux/Result_Reducer.js'
 import {startExamAction , moveNextAction , movePrevAction, resetAllAction} from '../redux/Question_Reducer.js'
+import { usePublishResult } from '../hooks/SetResult.js'
 function Result() {
 
 const dispatch = useDispatch()
@@ -19,13 +20,26 @@ const totolPoints = queue.length*points
 const attempts = attempts_Number(result)
 const earnPoints = earnPoints_Number(result,answers,points)
 const flag = flagResult(totolPoints,earnPoints,passPercentage)
+usePublishResult({result,
+  username: userId ,
+  attempts,
+  points: earnPoints,
+  achived: flag?"Passed": "Failed"
+})
+
+// // console.log({result,
+//             username: userId ,
+//             attempts,
+//             points: earnPoints,
+//             achived: flag?"Passed": "Failed"
+//           })
   function onRestart(){
-    console.log("restarting the quiz")
+    // console.log("restarting the quiz")
     dispatch(resetAllAction())
     dispatch(resetResultAction())
   }
   useEffect(()=>{
-    console.log(userId)
+    // console.log(userId)
   })
   return (
     <>
